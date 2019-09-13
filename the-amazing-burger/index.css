@@ -15,21 +15,21 @@ body {
     cursor: pointer;
 }
 
-#cb-burger:checked + #burger {
-    
+#cb-burger {
+    display: none;
 }
 
-#cb-burger:checked + #burger #top {
+#cb-burger:checked ~ #burger #top {
     background-color: orange;
     transform: translateY(14px) rotate(45deg);
 }
 
-#cb-burger:checked + #burger #bottom {
+#cb-burger:checked ~ #burger #bottom {
     background-color: orange;
     transform: translateY(-14px) rotate(-45deg);
 }
 
-#cb-burger:checked + #burger #meat {
+#cb-burger:checked ~ #burger #meat {
     background-color: orange;
     transform: translateX(-700px);
     opacity: 0;
@@ -38,4 +38,27 @@ body {
 #burger div {
     background-color: white;
     transition: transform 500ms, opacity 500ms;
+}
+
+#slide-in-menu {
+    background-color: #333;
+    position: absolute;
+    right: 100vw;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: space-around;
+    transition: right 500ms;
+}
+
+#cb-burger:checked ~ #slide-in-menu {
+    right: 0;
+}
+
+#slide-in-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
 }

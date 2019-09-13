@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knapper</title>
+    <style>
+        body {
+            background-color: #ccc;
+            font-family: sans-serif;
+            padding: 40px;
+        }
+
+        label {
+            display: inline-block;
+            padding: 16px;
+            border: 4px solid white;
+            color: white;
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background-color: orange;
+        }
+
+        label:active {
+            background-color: greenyellow;
+        }
+
+        input[name=rb-group] {
+            display: none;
+        }
+
+        input[name=rb-group]:checked + label {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <input type="radio" id="rb-1" name="rb-group">
+    <label for="rb-1">Push it 1</label>
+    
+    <input type="radio" id="rb-2" name="rb-group">
+    <label for="rb-2">Push it 2</label>
+    
+    <input type="radio" id="rb-3" name="rb-group">
+    <label for="rb-3">Push it 3</label>
+
+    
+
+</body>
+</html>

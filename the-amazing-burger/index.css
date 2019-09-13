@@ -1,0 +1,41 @@
+
+body {
+    background-color: black;
+}
+
+#burger {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    grid-auto-rows: 4px;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+#cb-burger:checked + #burger {
+    
+}
+
+#cb-burger:checked + #burger #top {
+    background-color: orange;
+    transform: translateY(14px) rotate(45deg);
+}
+
+#cb-burger:checked + #burger #bottom {
+    background-color: orange;
+    transform: translateY(-14px) rotate(-45deg);
+}
+
+#cb-burger:checked + #burger #meat {
+    background-color: orange;
+    transform: translateX(-700px);
+    opacity: 0;
+}
+
+#burger div {
+    background-color: white;
+    transition: transform 500ms, opacity 500ms;
+}

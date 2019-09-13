@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Merkelige selektorer</title>
+    <style>
+        h1 > i > span {
+            color: olive;
+        }
+
+        /* Finne div-element som ligger rett etter en h1 */
+        h1 + div {
+            background-color: orange;
+        }
+
+        /* Finne alle div-elemente som ligger rett etter en h1 */
+        h1 ~ div {
+            border-right: 100px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Merkelige <i><span>selektorer</span></i> i CSS</h1>
+    
+    <div>1</div>
+    <div>2</div>
+    <section>
+        <div>XXX</div>
+    </section>
+    <div>3</div>
+    <div>4</div>
+</body>
+</html>
